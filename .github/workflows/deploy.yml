@@ -37,3 +37,9 @@ jobs:
         with:
          github_token: ${{ secrets.GITHUB_TOKEN }} # Context vars
          publish_dir: ./dist # root directory that has index.html/css/js files, OR /dist
+
+    # Step 6: Show the file data
+      - name: Show file structure after building
+        run: |
+         echo "ls -R dist"
+         ls -R dist     
